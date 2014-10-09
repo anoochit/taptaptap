@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1280"
+   height="720"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.2 r9819"
+   sodipodi:docname="design.svg">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.78124653"
+     inkscape:cx="645.69868"
+     inkscape:cy="349.07919"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1440"
+     inkscape:window-height="780"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(0,-332.36218)">
+    <rect
+       style="fill:#0e232e;fill-opacity:1;stroke:none"
+       id="rect2985"
+       width="1280.0057"
+       height="720.64325"
+       x="0.71999431"
+       y="331.71896"
+       rx="0"
+       ry="0" />
+    <text
+       xml:space="preserve"
+       style="font-size:129.43968201px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Serto Jerusalem Outline;-inkscape-font-specification:Serto Jerusalem Outline"
+       x="249.1759"
+       y="569.11029"
+       id="text2987"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/Users/xavier/Project/TapTapTap/app/src/main/res/drawable-sw720dp/logo.png"
+       inkscape:export-xdpi="118.82375"
+       inkscape:export-ydpi="118.82375"><tspan
+         sodipodi:role="line"
+         id="tspan2989"
+         x="249.1759"
+         y="569.11029"
+         style="font-size:129.43968201px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Distressed Out;-inkscape-font-specification:Distressed Out">TapTapTap</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:118.61252594px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Serto Jerusalem Outline;-inkscape-font-specification:Serto Jerusalem Outline"
+       x="435.97232"
+       y="712.49396"
+       id="text2987-1"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/Users/xavier/Project/TapTapTap/app/src/main/res/drawable-sw720dp/newgame.png"
+       inkscape:export-xdpi="120.06466"
+       inkscape:export-ydpi="120.06466"><tspan
+         sodipodi:role="line"
+         id="tspan2989-3"
+         x="435.97232"
+         y="712.49396"
+         style="font-size:70px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Distressed Out;-inkscape-font-specification:Distressed Out">New game</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:118.61252594px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Serto Jerusalem Outline;-inkscape-font-specification:Serto Jerusalem Outline"
+       x="392.15668"
+       y="825.6333"
+       id="text2987-1-9"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/Users/xavier/Project/TapTapTap/app/src/main/res/drawable-sw720dp/achievement.png"
+       inkscape:export-xdpi="120.06466"
+       inkscape:export-ydpi="120.06466"><tspan
+         sodipodi:role="line"
+         id="tspan2989-3-7"
+         x="392.15668"
+         y="825.6333"
+         style="font-size:70px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Distressed Out;-inkscape-font-specification:Distressed Out">Achievement</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:118.61252594px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Serto Jerusalem Outline;-inkscape-font-specification:Serto Jerusalem Outline"
+       x="379.18811"
+       y="938.77271"
+       id="text2987-1-9-7"
+       sodipodi:linespacing="125%"
+       inkscape:export-filename="/Users/xavier/Project/TapTapTap/app/src/main/res/drawable-sw720dp/leaderboard.png"
+       inkscape:export-xdpi="120.06466"
+       inkscape:export-ydpi="120.06466"><tspan
+         sodipodi:role="line"
+         id="tspan2989-3-7-5"
+         x="379.18811"
+         y="938.77271"
+         style="font-size:70px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#ffffff;font-family:Distressed Out;-inkscape-font-specification:Distressed Out">Leaderboard</tspan></text>
+  </g>
+</svg>

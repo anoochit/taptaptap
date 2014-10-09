@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Tap Tap Tap</string>
+    <string name="action_settings">Settings</string>
+    <string name="textLevel">120s</string>
+    <string name="textScore">0</string>
+
+    <string-array name="background">
+        <item>33B5E5</item>
+        <item>AA66CC</item>
+        <item>99CC00</item>
+        <item>FFBB33</item>
+        <item>FF4444</item>
+        <item>0099CC</item>
+        <item>9933CC</item>
+        <item>669900</item>
+        <item>FF8800</item>
+        <item>CC0000</item>
+    </string-array>
+
+    <string-array name="color">
+        <item>A2D39C</item>
+        <item>C4DF9B</item>
+        <item>7BCDC8</item>
+        <item>6ECFF6</item>
+        <item>7EA7D8</item>
+        
+        <item>7CC576</item>
+        <item>ACD372</item>
+        <item>1ABBB4</item>
+        <item>00BFF3</item>
+        <item>438CCA</item>
+    </string-array>
+
+    
+    <string name="title_activity_splash">Splash</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="dialog_message">Your Score = </string>
+    <string name="dialog_title">Game Over!</string>
+    <string name="ok">OK</string>
+
+</resources>
