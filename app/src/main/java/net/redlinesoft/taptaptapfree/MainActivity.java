@@ -12,11 +12,20 @@ import android.os.Vibrator;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.FrameLayout;
 import android.widget.ImageButton;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.Timer;
 import java.util.TimerTask;
+
+import mobi.vserv.android.ads.AdOrientation;
+import mobi.vserv.android.ads.AdPosition;
+import mobi.vserv.android.ads.ViewNotEmptyException;
+import mobi.vserv.android.ads.VservAd;
+import mobi.vserv.android.ads.VservController;
+import mobi.vserv.android.ads.VservManager;
 
 
 public class MainActivity extends Activity {
@@ -39,6 +48,19 @@ public class MainActivity extends Activity {
 
     Context context = this;
 
+    // Vserv Ads
+    private FrameLayout adView;
+    private VservAd adObject;
+    private VservController controller;
+    private VservManager manager;
+    // test zone
+    //private static final String BANNER_ZONE = "20846";
+    //private static final String BILLBOARD_ZONE = "8063";
+    // my zone
+    private static final String BANNER_ZONE = "009ec7c5";
+    private static final String BILLBOARD_ZONE = "7799f753";
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,6 +68,14 @@ public class MainActivity extends Activity {
 
         // hide action bar
         hideActionBar();
+
+        // load ads
+        adView = (FrameLayout) findViewById(R.id.container);
+        manager = VservManager.getInstance(context);
+        manager.setShowAt(AdPosition.START);
+        manager.setCacheNextAd(true);
+        manager.displayAd(BILLBOARD_ZONE, AdOrientation.LANDSCAPE);
+ 
 
         // init var
         txtScore = (TextView) findViewById(R.id.txtScore);
@@ -57,6 +87,7 @@ public class MainActivity extends Activity {
         // load question
         loadData();
 
+        // start timer
         doTimer();
 
         // click listener
@@ -129,7 +160,7 @@ public class MainActivity extends Activity {
 
     public void showScoreDialog() {
         // show final score
-        String messageScore = getString(R.string.dialog_message) + String.valueOf(intScore);
+        String messageScore = getString(R.string.dialog_message) + " " + String.valueOf(intScore);
         AlertDialog.Builder alert = new AlertDialog.Builder(context);
         alert.setTitle(R.string.dialog_title)
                 .setMessage(messageScore)

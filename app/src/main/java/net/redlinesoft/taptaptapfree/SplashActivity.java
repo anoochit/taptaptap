@@ -21,13 +21,18 @@ public class SplashActivity extends BaseGameActivity
     int colorIndex=0;
 
     @Override
+    protected void onResume() {
+        super.onResume();
+        setBackground();
+    }
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        colorIndex =  (int)(Math.random()*4);
-        String[] colorString = getResources().getStringArray(R.array.background);
-        findViewById(R.id.splashView).setBackgroundColor(Color.parseColor("#" + colorString[colorIndex+5]));
+        // set background
+        setBackground();
 
         // hide action bar
         hideActionBar();
@@ -46,6 +51,13 @@ public class SplashActivity extends BaseGameActivity
         findViewById(R.id.imgButtonArchivement).setOnClickListener(this);
         findViewById(R.id.imgButtonLeaderboard).setOnClickListener(this);
 
+    }
+    
+    public void setBackground() {
+        colorIndex =  (int)(Math.random()*4);
+        String[] colorString = getResources().getStringArray(R.array.background);
+        findViewById(R.id.splashView).setBackgroundColor(Color.parseColor("#" + colorString[colorIndex+5]));
+        
     }
 
     private int loadCurrentScore() {

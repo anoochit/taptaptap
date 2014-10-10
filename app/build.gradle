@@ -17,6 +17,23 @@ android {
         }
     }
 }
+
+repositories {
+    flatDir {
+        dirs 'libs'
+    }
+}
+
+dependencies {
+    compile(name: 'VservAdSDK', ext: 'aar')
+}
+
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+}
+
+
 //noinspection GroovyAssignabilityCheck
 dependencies {
     compile 'com.android.support:appcompat-v7:19.0.0'
