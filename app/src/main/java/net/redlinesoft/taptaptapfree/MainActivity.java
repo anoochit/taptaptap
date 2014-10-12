@@ -20,8 +20,6 @@ import android.widget.Toast;
 import java.util.Timer;
 import java.util.TimerTask;
 
-import mobi.vserv.android.ads.AdOrientation;
-import mobi.vserv.android.ads.AdPosition;
 import mobi.vserv.android.ads.ViewNotEmptyException;
 import mobi.vserv.android.ads.VservAd;
 import mobi.vserv.android.ads.VservController;
@@ -45,7 +43,6 @@ public class MainActivity extends Activity {
     Timer timer = new Timer();
     TimerTask timetask, timeremain;
     Handler handler = new Handler();
-
     Context context = this;
 
     // Vserv Ads
@@ -71,11 +68,23 @@ public class MainActivity extends Activity {
 
         // load ads
         adView = (FrameLayout) findViewById(R.id.container);
+        /*
         manager = VservManager.getInstance(context);
         manager.setShowAt(AdPosition.START);
         manager.setCacheNextAd(true);
         manager.displayAd(BILLBOARD_ZONE, AdOrientation.LANDSCAPE);
- 
+        */
+
+        if (adView != null) {
+            adView.removeAllViews();
+        }
+        VservManager renderAdManager = VservManager.getInstance(context);
+        try {
+            controller = renderAdManager.renderAd(BANNER_ZONE, adView);
+        } catch (ViewNotEmptyException e) {
+            Toast.makeText(context, e.getMessage(), Toast.LENGTH_SHORT)
+                    .show();
+        }
 
         // init var
         txtScore = (TextView) findViewById(R.id.txtScore);
@@ -260,6 +269,7 @@ public class MainActivity extends Activity {
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
+
         if (hasFocus) {
             decorView.setSystemUiVisibility(
                     View.SYSTEM_UI_FLAG_LAYOUT_STABLE
@@ -270,6 +280,7 @@ public class MainActivity extends Activity {
                             | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
             );
         }
+
     }
 
     @Override

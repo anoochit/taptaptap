@@ -1,19 +1,30 @@
 apply plugin: 'com.android.application'
 android {
+    signingConfigs {
+        config {
+            keyAlias 'redlinesoft-app-key'
+            keyPassword 'monalisa'
+            storeFile file('/Users/xavier/Workspace/redlinesoft-app-key.keystore')
+            storePassword 'monalisa'
+        }
+    }
     compileSdkVersion 19
     buildToolsVersion '19.1.0'
-
     defaultConfig {
         applicationId "net.redlinesoft.taptaptapfree"
-        minSdkVersion 19
+        minSdkVersion 16
         targetSdkVersion 19
-        versionCode 1
-        versionName "1.0"
+        versionCode 2
+        versionName "1.1"
     }
     buildTypes {
         release {
             runProguard false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.config
+        }
+        debug {
+            signingConfig signingConfigs.config
         }
     }
 }

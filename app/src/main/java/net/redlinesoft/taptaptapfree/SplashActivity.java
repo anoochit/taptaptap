@@ -18,7 +18,7 @@ public class SplashActivity extends BaseGameActivity
     SharedPreferences gameScore;
     int lastScore;
     private View decorView;
-    int colorIndex=0;
+    int colorIndex = 0;
 
     @Override
     protected void onResume() {
@@ -52,12 +52,12 @@ public class SplashActivity extends BaseGameActivity
         findViewById(R.id.imgButtonLeaderboard).setOnClickListener(this);
 
     }
-    
+
     public void setBackground() {
-        colorIndex =  (int)(Math.random()*4);
+        colorIndex = (int) (Math.random() * 4);
         String[] colorString = getResources().getStringArray(R.array.background);
-        findViewById(R.id.splashView).setBackgroundColor(Color.parseColor("#" + colorString[colorIndex+5]));
-        
+        findViewById(R.id.splashView).setBackgroundColor(Color.parseColor("#" + colorString[colorIndex + 5]));
+
     }
 
     private int loadCurrentScore() {
@@ -70,10 +70,10 @@ public class SplashActivity extends BaseGameActivity
     private void setArchivement(int score) {
 
         if (getApiClient().isConnected())
-            
-        // Submit Leaderboard
-        Games.Leaderboards.submitScore(getApiClient(),
-                getString(R.string.leaderboard_tap_of_frame),score);
+
+            // Submit Leaderboard
+            Games.Leaderboards.submitScore(getApiClient(),
+                    getString(R.string.leaderboard_tap_of_frame), score);
 
         // calculate score
         if (score >= 5) {
@@ -119,6 +119,7 @@ public class SplashActivity extends BaseGameActivity
 
 
     private void hideActionBar() {
+
         decorView = getWindow().getDecorView();
         decorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
             @Override
@@ -141,11 +142,13 @@ public class SplashActivity extends BaseGameActivity
                 }
             }
         });
+
     }
 
     @Override
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
+
         if (hasFocus) {
             decorView.setSystemUiVisibility(
                     View.SYSTEM_UI_FLAG_LAYOUT_STABLE
@@ -153,8 +156,10 @@ public class SplashActivity extends BaseGameActivity
                             | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
                             | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
                             | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+            );
         }
+
     }
 
     @Override

@@ -4,15 +4,15 @@ Google Play game services IDs.
 Save this file as res/values/games-ids.xml in your project.
 -->
 <resources>
-    <string name="app_id">989223156636</string>
-    <string name="achievement_n00b">CgkInPetkuUcEAIQAQ</string>
-    <string name="achievement_busy_guy">CgkInPetkuUcEAIQAg</string>
-    <string name="achievement_business_man">CgkInPetkuUcEAIQAw</string>
-    <string name="achievement_professional">CgkInPetkuUcEAIQBA</string>
-    <string name="achievement_supper">CgkInPetkuUcEAIQBQ</string>
-    <string name="achievement_excellent">CgkInPetkuUcEAIQCA</string>
-    <string name="achievement_incredible">CgkInPetkuUcEAIQCQ</string>
-    <string name="achievement_brilliant">CgkInPetkuUcEAIQCg</string>
-    <string name="achievement_superb">CgkInPetkuUcEAIQCw</string>
-    <string name="leaderboard_tap_of_frame">CgkInPetkuUcEAIQBg</string>
+    <string name="app_id">138345190652</string>
+    <string name="achievement_n00b">CgkI_KmQsIMEEAIQAg</string>
+    <string name="achievement_busy_guy">CgkI_KmQsIMEEAIQAw</string>
+    <string name="achievement_business_man">CgkI_KmQsIMEEAIQBA</string>
+    <string name="achievement_professional">CgkI_KmQsIMEEAIQBQ</string>
+    <string name="achievement_supper">CgkI_KmQsIMEEAIQBg</string>
+    <string name="achievement_excellent">CgkI_KmQsIMEEAIQBw</string>
+    <string name="achievement_incredible">CgkI_KmQsIMEEAIQCA</string>
+    <string name="achievement_brilliant">CgkI_KmQsIMEEAIQCQ</string>
+    <string name="achievement_superb">CgkI_KmQsIMEEAIQCg</string>
+    <string name="leaderboard_tap_of_frame">CgkI_KmQsIMEEAIQAQ</string>
 </resources>
