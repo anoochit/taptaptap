@@ -3,6 +3,7 @@ package net.redlinesoft.taptaptapfree;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.graphics.Color;
+import android.os.Build;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
@@ -20,6 +21,8 @@ public class SplashActivity extends BaseGameActivity
     private View decorView;
     int colorIndex = 0;
 
+    int SDK_VERSION;
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -29,13 +32,15 @@ public class SplashActivity extends BaseGameActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        // hide action bar
+        hideActionBar();
+
         setContentView(R.layout.activity_splash);
 
         // set background
         setBackground();
 
-        // hide action bar
-        hideActionBar();
 
         // loadScore
         Log.d("Log", "Score = " + String.valueOf(loadCurrentScore()));
@@ -120,7 +125,9 @@ public class SplashActivity extends BaseGameActivity
 
     private void hideActionBar() {
 
+        //Toast.makeText(this, String.valueOf(Build.VERSION.SDK_INT), Toast.LENGTH_SHORT).show();
         decorView = getWindow().getDecorView();
+
         decorView.setOnSystemUiVisibilityChangeListener(new View.OnSystemUiVisibilityChangeListener() {
             @Override
             public void onSystemUiVisibilityChange(int visibility) {
@@ -131,17 +138,34 @@ public class SplashActivity extends BaseGameActivity
                                     | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
 
                 } else {
-                    decorView.setSystemUiVisibility(
-                            View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                                    | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                                    | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                                    | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
-                                    | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
-                                    | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY);
+
+                    if (Build.VERSION.SDK_INT >= 19) {
+                        decorView.setSystemUiVisibility(
+                                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                                        | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+
+                        );
+                    } else {
+                        decorView.setSystemUiVisibility(
+                                View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                                        | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                                        | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                                        | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION // hide nav bar
+                                        | View.SYSTEM_UI_FLAG_FULLSCREEN // hide status bar
+                                //     | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+
+                        );
+
+                    }
 
                 }
             }
         });
+
 
     }
 
@@ -149,15 +173,17 @@ public class SplashActivity extends BaseGameActivity
     public void onWindowFocusChanged(boolean hasFocus) {
         super.onWindowFocusChanged(hasFocus);
 
-        if (hasFocus) {
-            decorView.setSystemUiVisibility(
-                    View.SYSTEM_UI_FLAG_LAYOUT_STABLE
-                            | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
-                            | View.SYSTEM_UI_FLAG_FULLSCREEN
-                            | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
-            );
+        if (Build.VERSION.SDK_INT >= 19) {
+            if (hasFocus) {
+                decorView.setSystemUiVisibility(
+                        View.SYSTEM_UI_FLAG_LAYOUT_STABLE
+                                | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
+                                | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
+                                | View.SYSTEM_UI_FLAG_HIDE_NAVIGATION
+                                | View.SYSTEM_UI_FLAG_FULLSCREEN
+                                | View.SYSTEM_UI_FLAG_IMMERSIVE_STICKY
+                );
+            }
         }
 
     }
