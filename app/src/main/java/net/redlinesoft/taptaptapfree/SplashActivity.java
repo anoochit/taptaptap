@@ -21,8 +21,6 @@ public class SplashActivity extends BaseGameActivity
     private View decorView;
     int colorIndex = 0;
 
-    int SDK_VERSION;
-
     @Override
     protected void onResume() {
         super.onResume();

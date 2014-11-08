@@ -23,6 +23,7 @@ import java.util.TimerTask;
 
 import mobi.vserv.android.ads.AdOrientation;
 import mobi.vserv.android.ads.AdPosition;
+import mobi.vserv.android.ads.AdType;
 import mobi.vserv.android.ads.ViewNotEmptyException;
 import mobi.vserv.android.ads.VservAd;
 import mobi.vserv.android.ads.VservController;
@@ -76,7 +77,7 @@ public class MainActivity extends Activity {
         manager = VservManager.getInstance(context);
         manager.setShowAt(AdPosition.START);
         manager.setCacheNextAd(true);
-        manager.displayAd(BILLBOARD_ZONE, AdOrientation.LANDSCAPE);
+        manager.displayAd(BILLBOARD_ZONE, AdType.OVERLAY);
 
         // banner
         if (adView != null) {
